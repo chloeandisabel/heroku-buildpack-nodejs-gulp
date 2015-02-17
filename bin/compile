@@ -84,7 +84,7 @@ fi
 
   status "Installing dependencies"
   # Make npm output to STDOUT instead of its default STDERR
-  npm install --userconfig $build_dir/.npmrc --production 2>&1 | indent
+  npm install --dev --userconfig $build_dir/.npmrc --production 2>&1 | indent
 )
 
 # Persist goodies like node-version in the slug
@@ -134,9 +134,6 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
 
 # Check and run gulp
 (
-  status "HERE"
-  status $build_dir
-  ls $build_dir
   if [ -f $build_dir/Gulpfile.js ]; then
     # get the env vars
     if [ -d "$env_dir" ]; then
