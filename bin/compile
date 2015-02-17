@@ -137,7 +137,7 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
   status "HERE"
   status $build_dir
   ls $build_dir
-  if [ -f $build_dir/gulpfile.js ]; then
+  if [ -f $build_dir/Gulpfile.js ]; then
     # get the env vars
     if [ -d "$env_dir" ]; then
       status "Exporting config vars to environment"
