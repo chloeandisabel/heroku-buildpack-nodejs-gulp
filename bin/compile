@@ -144,6 +144,7 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
     # Install gulp locally
     npm install gulp
     status "Found gulpfile, running gulp heroku"
+    ls -al
     $build_dir/node_modules/.bin/gulp heroku
   else
     status "No gulpfile found"
